@@ -1,0 +1,52 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Buy Now</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>Music Store</h1>
+<nav>
+<a href="/">Home</a>
+<a href="/music_catalog">Music Catalog</a>
+<a href="/contact">Contact Us</a>
+</nav>
+</header>
+<main>
+<section class="buy-now">
+<h2>Buy Now</h2>
+<form action="/process_purchase" method="POST">
+<input type="hidden" name="album_id" value="{{ album.album_id }}">
+<div class="album-info">
+<img src="{{ album.album_cover }}" alt="Album Cover">
+<div>
+<h3>{{ album.album_title }}</h3>
+<p>{{ album.artist_name }}</p>
+<p>{{ album.price }}</p>
+</div>
+</div>
+<div class="payment-info">
+<label for="name">Name:</label>
+<input type="text" name="name" required>
+<label for="card_number">Card Number:</label>
+<input type="text" name="card_number" required>
+<label for="exp_date">Expiration Date:</label>
+<input type="text" name="exp_date" required>
+<label for="cvv">CVV:</label>
+<input type="text" name="cvv" required>
+<button type="submit" class="btn">Buy Now</button>
+</div>
+</form>
+</section>
+</main>
+<footer>
+<p>Copyright &copy; 2023 Music Store</p>
+</footer>
+</body>
+</html>
+
+
+
